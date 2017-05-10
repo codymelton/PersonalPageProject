@@ -41,4 +41,5 @@ If the app is functional - commit your code.
   - Create Endpoints in `routes/articles` ONE AT A TIME, and continually test using PostMan
   - Once you are satisfied all CRUD routes work do the following:
   - `git add -A`
-  - 
+
+** FINISHED GET COMMAND ONLY **
