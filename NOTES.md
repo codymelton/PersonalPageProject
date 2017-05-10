@@ -24,6 +24,21 @@ app.get('/test', function(req,res){
 update server in bin/www to use port 3001
 `var port = normalizePort(process.env.PORT || '3001');`
 
+In package.json change `"start": "node ./bin/www"` -> `"start": "nodemon ./bin/www"`
+this will make it so that the server automatically restarts with saved code changes.
+
 Take the app for a spin and test the endpoint with PostMan
 
-If the app is functional - commit your code
+If the app is functional - commit your code.
+** DONE **
+
+#### Begin API Phase
+
+  - Checkout to a safe branch
+  - `git checkout -b articles`
+  - Create article Model
+  - Create routes folder, and `routes/articles.js`
+  - Create Endpoints in `routes/articles` ONE AT A TIME, and continually test using PostMan
+  - Once you are satisfied all CRUD routes work do the following:
+  - `git add -A`
+  - 
