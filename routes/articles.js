@@ -45,6 +45,20 @@ Router.route('/')
           res.json({message: "Article Removed!"})
         }
       });
+    })
+
+    .put(function(req,res){
+      Article.findById(req.params.article_id, function(err, article){
+        if (!article) return res.status(404);
+        article.loadData(req.body);
+        article.save(function(e){
+          if (e) {
+            res.send(e);
+          } else {
+            res.json({article, message: "Article Updated!"});
+          }
+        })
+      });
     });
 
   module.exports = Router;

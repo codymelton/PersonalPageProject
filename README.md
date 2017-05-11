@@ -20,6 +20,8 @@ Technologies
 
   API
 
+  To POST `/api/articles`
+
   ToDo - Document all of your endpoints, how to utilize them, and then expected response for each endpoint.
 
   Resources
