@@ -1,4 +1,4 @@
-# Personal Blogging Site
+# Personal Portfolio Site
 #### *synopsis*
 This is a full stack javascript project, utilizing all the tools and technologies I have learned while attending BSCA.  The project will consist of a home page, which markets my current skill sets as a web developer, compete with an about me, and portfolio section
 
