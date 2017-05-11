@@ -6,7 +6,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-var articleRoutes = require('./routes/articles')
+var routes = require('./routes/index')
 
 require('./config/database-connection')();
 
@@ -18,7 +18,8 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use('/api/articles', articleRoutes)
+
+routes(app);
 
 // Simple test route to ensure that that app is functioning.
 app.get('/test', function(req,res){
