@@ -26,4 +26,25 @@ Router.route('/')
     });
   });
 
+  Router.route('/:article_id')
+    .get(function(req,res){
+      Article.findById(req.params.article_id, function(err,data){
+        if (err) {
+          res.send(err);
+        } else {
+          res.json(data);
+        }
+      });
+    })
+
+    .delete(function(req,res){
+      Article.remove({_id: req.params.article_id}, function(err){
+        if (err) {
+          res.send(err);
+        } else {
+          res.json({message: "Article Removed!"})
+        }
+      });
+    });
+
   module.exports = Router;

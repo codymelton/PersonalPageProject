@@ -45,4 +45,4 @@ If the app is functional - commit your code.
   - `git checkout master`
   - `git merge articles` -> brings your new code into articles
   - `git push origin master` -> sync your master branch with new code
-** FINISHED GET COMMAND ONLY **
+** FINISHED GET and POST COMMAND **
