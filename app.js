@@ -20,10 +20,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use('/api/articles', articleRoutes)
 
+// Simple test route to ensure that that app is functioning.
 app.get('/test', function(req,res){
   res.json({message: "App functioning properly"})
 });
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

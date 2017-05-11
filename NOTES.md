@@ -41,5 +41,8 @@ If the app is functional - commit your code.
   - Create Endpoints in `routes/articles` ONE AT A TIME, and continually test using PostMan
   - Once you are satisfied all CRUD routes work do the following:
   - `git add -A`
-
+  - `git push origin articles` -> Note you pushed to your new branch
+  - `git checkout master`
+  - `git merge articles` -> brings your new code into articles
+  - `git push origin master` -> sync your master branch with new code
 ** FINISHED GET COMMAND ONLY **
