@@ -56,3 +56,15 @@ Once in your branch - Do you code for the about - once functional push your code
 `git checkout master`
 `git merge about` -> brings your code from about into master
 `git push origin master` -> push all new code to github
+
+#### Blog Post Component
+
+  - ArticleList - list of the articles
+  -- ArticleCard - single view of an article
+  -- CommentComponent
+  
+  - PostArticle
+
+  - EditArticle
+
+  - ViewArticle
