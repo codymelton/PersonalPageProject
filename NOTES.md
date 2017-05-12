@@ -45,3 +45,14 @@ If the app is functional - commit your code.
   - `git checkout master`
   - `git merge articles` -> brings your new code into articles
   - `git push origin master` -> sync your master branch with new code
+
+
+#### Create React
+  - Make about page
+Once in your branch - Do you code for the about - once functional push your code to the about branch
+`git add -A`
+`git commit -m 'made about page'`
+`git push origin about` -> important part!
+`git checkout master`
+`git merge about` -> brings your code from about into master
+`git push origin master` -> push all new code to github
