@@ -12,7 +12,8 @@ import App from './App';
 import {HomeContainer,
         AboutContainer,
         ArticlesContainer,
-        PostArticleContainer}
+        PostArticleContainer,
+        EditArticleContainer}
         from './containers'
 
 
@@ -25,6 +26,7 @@ ReactDOM.render(
       <Route path="/about" component={AboutContainer} />
       <Route path="/articles" component={ArticlesContainer} />
       <Route path="/post_article" component={PostArticleContainer} />
+      <Route path="/edit_article/:articleId" component={EditArticleContainer} />
     </Route>
   </Router>,
   document.getElementById('root')
