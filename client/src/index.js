@@ -6,18 +6,25 @@ import {Router,
         IndexRoute}
         from 'react-router'
 
+require('bootstrap/dist/css/bootstrap.css')
+
 import App from './App';
 import {HomeContainer,
-        AboutContainer}
+        AboutContainer,
+        ArticlesContainer,
+        PostArticleContainer}
         from './containers'
+
 
 
 ReactDOM.render(
   <Router history={browserHistory}>
     <Route path="/" component={App}>
-      <Route path="/home" component={HomeContainer} />
       <IndexRoute component={HomeContainer} />
+      <Route path="/home" component={HomeContainer} />
       <Route path="/about" component={AboutContainer} />
+      <Route path="/articles" component={ArticlesContainer} />
+      <Route path="/post_article" component={PostArticleContainer} />
     </Route>
   </Router>,
   document.getElementById('root')
