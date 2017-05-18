@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 var express = require('express');
 var Article = require('./models/article');
 var path = require('path');
@@ -9,6 +11,10 @@ var mongoose = require('mongoose');
 var routes = require('./routes/index')
 
 require('./config/database-connection')();
+
+if(process.env.SEED_DATABASE === "true"){
+  require('./config/database-seeder')();
+}
 
 var app = express();
 

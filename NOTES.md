@@ -71,3 +71,8 @@ Once in your branch - Do you code for the about - once functional push your code
 
 npm run dev (get front and the backend running)
 npm install --save bootstrap (do this in the client folder to install bootstrap in project.)
+
+.env  SEED_DATABASE to false by default... if set to true and save then will clear the database and
+create new data.
+
+Make sure and update config/database-seeder as database architecture/items change.
