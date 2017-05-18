@@ -14,6 +14,7 @@ class EditArticleContainer extends Component{
 
   updateField = this.updateField.bind(this);
   handleSubmit = this.handleSubmit.bind(this);
+  deleteById = this.deleteById.bind(this);
 
   componentDidMount = () => this.loadArticles();
 
@@ -51,6 +52,16 @@ class EditArticleContainer extends Component{
       data: data
     }).done(response => {
       console.log(response);
+    })
+  }
+
+  deleteById(event){
+    event.preventDefault();
+    $.ajax({
+      url: `/api/articles/${this.props.params.articleId}`,
+      method: "DELETE"
+    }).done(response => {
+      console.log(response, "Article Deleted.");
     })
   }
 

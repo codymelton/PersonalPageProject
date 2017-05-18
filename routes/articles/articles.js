@@ -38,7 +38,7 @@ exports.makeNew = (req,res) => {
         if (err) {
           res.send(err);
         } else {
-          res.json({message: "Article Removed!"})
+          res.json({message: "Article Removed!"});
         }
       });
     };

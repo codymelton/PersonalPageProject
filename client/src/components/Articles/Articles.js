@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router';
 
 const Articles = (props) => {
   return(
@@ -13,6 +14,8 @@ const Articles = (props) => {
             <li> <h4>By: {item.author}</h4> </li>
             <li> <p>{item.body}</p> </li>
           </ul>
+        <Link className="btn btn-warning" to={`/edit_article/${item._id}`}>Edit</Link>
+        <button className="btn btn-danger" onClick={ (event) => props.deleteById(event) }>Delete</button>
         </div>
       ))}
     </div>

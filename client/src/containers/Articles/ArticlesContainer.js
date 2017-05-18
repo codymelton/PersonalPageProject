@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import $ from 'jquery';
 import {Articles} from '../../components';
+import {browserHistory} from 'react-router';
 
 class ArticlesContainer extends Component {
 
@@ -9,6 +10,7 @@ class ArticlesContainer extends Component {
   }
 
   componentDidMount = () => this.loadArticles();
+
 
   loadArticles() {
     $.ajax({
@@ -20,11 +22,23 @@ class ArticlesContainer extends Component {
     });
   }
 
+  deleteById = this.deleteById.bind(this)
+
+    deleteById(event){
+      event.preventDefault();
+      console.log("I prevented the default");
+      $.ajax({
+        url: `/api/articles/${this.props.params.article_id}`,
+        method: "DELETE"
+      }).done((response) => browserHistory.push("/articles"))
+    }
+
   render() {
     return(
       <div>
         {this.state.articles
-          ? <Articles articles={this.state.articles} />
+          ? <Articles articles={this.state.articles}
+                      deleteById={this.deleteById}/>
           : undefined}
       </div>
     )

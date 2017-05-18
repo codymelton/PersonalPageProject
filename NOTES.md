@@ -73,6 +73,6 @@ npm run dev (get front and the backend running)
 npm install --save bootstrap (do this in the client folder to install bootstrap in project.)
 
 .env  SEED_DATABASE to false by default... if set to true and save then will clear the database and
-create new data.
+create new data.  Also need to uncomment code in app.js in order for the seed to work.
 
 Make sure and update config/database-seeder as database architecture/items change.

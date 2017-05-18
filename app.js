@@ -12,7 +12,7 @@ var routes = require('./routes/index')
 
 require('./config/database-connection')();
 
-// Never push this to github!
+// Never push this to github! - UNCOMMENT TO SEED DATA
 // if(process.env.SEED_DATABASE === "true"){
 //   require('./config/database-seeder')();
 // }
