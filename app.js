@@ -12,9 +12,10 @@ var routes = require('./routes/index')
 
 require('./config/database-connection')();
 
-if(process.env.SEED_DATABASE === "true"){
-  require('./config/database-seeder')();
-}
+// Never push this to github!
+// if(process.env.SEED_DATABASE === "true"){
+//   require('./config/database-seeder')();
+// }
 
 var app = express();
 
