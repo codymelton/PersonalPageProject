@@ -24,11 +24,13 @@ exports.makeNew = (req,res) => {
   };
 
   exports.getById = (req,res) => {
-      Article.findById(req.params.article_id, function(err,data){
+      console.log(req.params.article_id);
+      Article.findById(req.params.article_id, function(err,article){
+        console.log("Found entry", article);
         if (err) {
           res.send(err);
         } else {
-          res.json(data);
+          res.json({data: article});
         }
       });
     };
@@ -38,7 +40,11 @@ exports.makeNew = (req,res) => {
         if (err) {
           res.send(err);
         } else {
-          res.json({message: "Article Removed!"});
+          Article.find(function(err, articles){
+            if (err) res.json({error: err});
+            res.json({message: "Article Removed!", data: articles});
+          });
+
         }
       });
     };

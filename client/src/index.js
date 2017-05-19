@@ -13,7 +13,8 @@ import {HomeContainer,
         AboutContainer,
         ArticlesContainer,
         PostArticleContainer,
-        EditArticleContainer}
+        EditArticleContainer,
+        SingleArticleContainer}
         from './containers'
 
 
@@ -27,6 +28,7 @@ ReactDOM.render(
       <Route path="/articles" component={ArticlesContainer} />
       <Route path="/post_article" component={PostArticleContainer} />
       <Route path="/edit_article/:articleId" component={EditArticleContainer} />
+      <Route path="/single_article/:articleId" component={SingleArticleContainer}/>
     </Route>
   </Router>,
   document.getElementById('root')

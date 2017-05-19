@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import $ from 'jquery';
 import {Articles} from '../../components';
-import {browserHistory} from 'react-router';
 
 class ArticlesContainer extends Component {
 
@@ -18,19 +17,19 @@ class ArticlesContainer extends Component {
       method: "GET"
     }).done(response => {
       console.log(response);
-      this.setState({ articles: response.data });
+      let articles = response.data.reverse(); // reverses array.
+      this.setState({ articles: articles}); // can just use 1 word since repeated.
     });
   }
 
   deleteById = this.deleteById.bind(this)
 
-    deleteById(event){
+    deleteById(event, _id){
       event.preventDefault();
-      console.log("I prevented the default");
       $.ajax({
-        url: `/api/articles/${this.props.params.article_id}`,
+        url: `/api/articles/${_id}`,
         method: "DELETE"
-      }).done((response) => browserHistory.push("/articles"))
+      }).done((response) => this.setState({ articles: response.data }))
     }
 
   render() {
