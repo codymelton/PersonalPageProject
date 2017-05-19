@@ -76,3 +76,6 @@ npm install --save bootstrap (do this in the client folder to install bootstrap 
 create new data.  Also need to uncomment code in app.js in order for the seed to work.
 
 Make sure and update config/database-seeder as database architecture/items change.
+
+Add post dates...
+Add ascending descending sort option.
