@@ -8,11 +8,32 @@ class PostArticleContainer extends Component {
     title: undefined,
     author: undefined,
     body: undefined,
-    draft: undefined
+    draft: undefined,
+    valid: false
+  }
+
+  updateField(name, value){
+    const newState = {};
+    newState[name]=value;
+    this.setState(newState)
+  }
+
+  onChange = this.onChange.bind(this);
+
+  onChange(name, value) {
+    this.updateField(name, value);
+    this.validate();
+  }
+
+  validate(){
+    this.setState({
+      valid: (this.state.title !== undefined) &&
+             (this.state.author !== undefined) &&
+             (this.state.body !== undefined) //didnt add draft due to boolean
+    })
   }
 
   handleSubmit = this.handleSubmit.bind(this)
-
 
   handleSubmit(event){
     event.preventDefault()
@@ -34,30 +55,28 @@ class PostArticleContainer extends Component {
     })
   }
 
-  updateTitle=(event) => this.setState({
-    title: event.target.value
-  })
-
-  updateAuthor=(event) => this.setState({
-    author: event.target.value
-  })
-
-  updateBody=(event) => this.setState({
-    body: event.target.value
-  })
-
-  updateDraft=(event) => this.setState({
-    draft: event.target.value
-  })
+  // updateTitle=(event) => this.setState({
+  //   title: event.target.value
+  // })
+  //
+  // updateAuthor=(event) => this.setState({
+  //   author: event.target.value
+  // })
+  //
+  // updateBody=(event) => this.setState({
+  //   body: event.target.value
+  // })
+  //
+  // updateDraft=(event) => this.setState({
+  //   draft: event.target.value
+  // })
 
   render() {
     return(
       <div>
-        <PostArticleForm handleSubmit={this.handleSubmit}
-                         updateTitle={this.updateTitle}
-                         updateAuthor={this.updateAuthor}
-                         updateBody={this.updateBody}
-                         updateDraft={this.updateDraft} />
+        <PostArticleForm handleSubmit={ this.handleSubmit }
+                         onChange={ this.onChange }
+                         valid={ this.state.valid }/>
       </div>
     )
   }
