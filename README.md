@@ -73,3 +73,12 @@ Technologies
 * Designing Home page using [sketch](https://www.sketchapp.com)
 * Update Article to have category & category relationships
 * Migrate to production using [Heroku](https://www.heroku.com/)
+
+### Phase Three
+
+* Create Model Comment with field content
+* Add Comment relationship to Article
+* Implement API endpoint to create Comment on Article.
+  *  make sure you populate the comment, on Article
+* Implement Client side ability to view comments for an article.
+* Implement Client side ability to post comment on an article.

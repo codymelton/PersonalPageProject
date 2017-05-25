@@ -4,7 +4,8 @@ var ArticleSchema = new mongoose.Schema({
   title:  {required: true, type: String},
   author: String,
   body:   String,
-  draft:  Boolean
+  draft:  Boolean,
+  comments: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Comment' }]
 });
 
 ArticleSchema.methods.loadData = function(data){

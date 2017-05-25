@@ -9,4 +9,5 @@ module.exports = (app) => {
   app.put('/api/articles/:article_id', ArticleRoutes.editById);
   app.delete('/api/articles/:article_id', ArticleRoutes.deleteById);
   app.get('/api/articles/:article_id', ArticleRoutes.getById); // get by id
+  app.post('/api/articles/comments/:article_id', ArticleRoutes.makeComment);
 }
