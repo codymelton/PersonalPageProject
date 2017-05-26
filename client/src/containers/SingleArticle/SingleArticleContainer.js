@@ -9,7 +9,8 @@ class SingleArticleContainer extends Component {
     author: undefined,
     body: undefined,
     draft: undefined,
-    article: undefined
+    article: undefined,
+    text: undefined
   }
 
   componentDidMount = () => this.loadArticle();
@@ -24,11 +25,15 @@ class SingleArticleContainer extends Component {
     })
   }
 
+
+
   render() {
     return(
       <div>
         {this.state.article
-          ? <SingleArticle article={this.state.article} />
+          ? <SingleArticle article={this.state.article}
+                           submitComment={this.submitComment}
+                           text={this.state.text}/>
           :undefined}
       </div>
     )

@@ -1,4 +1,5 @@
 import React from 'react';
+import { CommentsContainer } from '../../containers';
 
 const SingleArticle = (props) => {
   return(
@@ -10,6 +11,9 @@ const SingleArticle = (props) => {
         <div><h3>{props.article.title}</h3></div>
         <div><h4>{props.article.author}</h4></div>
         <div><p>{props.article.body}</p></div>
+      </div>
+      <div>
+        <CommentsContainer id={props.article._id} />
       </div>
     </div>
   )
