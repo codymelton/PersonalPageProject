@@ -15,7 +15,7 @@
   background: #3C6B9D;
   border: 1px solid #979797;
   border-radius: 17px;
-  display: block;
+  display: flex;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -27,5 +27,26 @@
   height: 261px;
   width: 250px;
   border-radius: 150px;
-  position: relative;
+  margin-left: -13%;
+  float: left;
+}
+
+.mainTronText{
+  /* Cody Melton, M.Ed.: */
+font-family: Verdana;
+font-size: 48px;
+color: #FFFFFF;
+letter-spacing: 0;
+text-align: center;
+float: center;
+margin-left: 13%;
+}
+
+.mainTronLinks{
+  float: right;  
+}
+
+.mainTronLinks ul{
+  list-style: none;
+  padding: 0;
 }
