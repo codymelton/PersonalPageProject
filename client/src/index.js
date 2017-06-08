@@ -5,6 +5,8 @@ import {Router,
         browserHistory,
         IndexRoute}
         from 'react-router'
+import SignUpContainer from './userAuth/SignUpContainer';
+import LoginContainer from './userAuth/LoginContainer';
 
 require('bootstrap/dist/css/bootstrap.css')
 
@@ -31,6 +33,8 @@ ReactDOM.render(
       <Route path="/edit_article/:articleId" component={EditArticleContainer} />
       <Route path="/single_article/:articleId" component={SingleArticleContainer}/>
       <Route path="/comments/:articleId" component={CommentsContainer}/>
+      <Route path="/signup" component={SignUpContainer}/>
+      <Route path="/login" component={LoginContainer}/>
     </Route>
   </Router>,
   document.getElementById('root')

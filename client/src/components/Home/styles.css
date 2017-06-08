@@ -1,5 +1,31 @@
 .largeButton {
   composes: button from '../../sharedStyles/styles.css';
   font-size: 23px;
-  color: blue;
+
+}
+
+.icon {
+  font-size: 45px;
+}
+
+.mainTronBox{
+    /* Rectangle 2: */
+  height: 261px;
+  width: 845px;
+  background: #3C6B9D;
+  border: 1px solid #979797;
+  border-radius: 17px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.mainTronCircle{
+  /* Mask: */
+  background: #D8D8D8;
+  height: 261px;
+  width: 250px;
+  border-radius: 150px;
+  position: relative;
 }
