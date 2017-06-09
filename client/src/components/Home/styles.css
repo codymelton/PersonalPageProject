@@ -25,7 +25,7 @@
   /* Mask: */
   background: #D8D8D8;
   height: 261px;
-  width: 250px;
+  width: 250px; /*try making 261*/
   border-radius: 150px;
   margin-left: -13%;
   float: left;
@@ -43,7 +43,7 @@ margin-left: 13%;
 }
 
 .mainTronLinks{
-  float: right;  
+  float: right;
 }
 
 .mainTronLinks ul{
