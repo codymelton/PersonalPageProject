@@ -1,2 +1,2 @@
-web: cd client && npm start
-api: PORT=3001 npm run mon
+web: cd client && yarn run start
+api: PORT=3001 yarn run mon

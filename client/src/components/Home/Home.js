@@ -4,9 +4,13 @@ import {largeButton,
         mainTronBox,
         mainTronCircle,
         mainTronText,
-        mainTronLinks} from './styles.css'
+        mainTronLinks,
+        secTronText} from './styles.css'
 import {button} from '../../sharedStyles/styles.css'
-import GitHubIcon from 'react-icons/lib/fa/github-square' //EXAMPLE OF REACT ICONS
+import GitHubIcon from 'react-icons/lib/fa/github' //EXAMPLE OF REACT ICONS
+import TwitterIcon from 'react-icons/lib/fa/twitter'
+import LinkedInIcon from 'react-icons/lib/fa/linkedin'
+import MailIcon from 'react-icons/lib/fa/envelope-o'
 
 const Home = (props) => {
   return(
@@ -15,12 +19,23 @@ const Home = (props) => {
         <div className={mainTronCircle}>
           <img src="./img/headshot.png" />
         </div>
-        <div className={mainTronText}>
-          Cody Melton, M.Ed.
+        <div>
+          <div className={mainTronText}>
+            Cody Melton, M.Ed.
+          </div>
+          <div className={secTronText}>
+            Full Stack Web Developer
+          </div>
+          <div className={secTronText}>
+            Curriculum Development Consultant
+          </div>
         </div>
         <div className={mainTronLinks}>
           <ul>
-            <li>test</li>
+            <li><a link="https://www.github.com/codymelton"><GitHubIcon className={icon} /></a></li>
+            <li><a link="https://www.twitter.com/cmeltonmt"><TwitterIcon className={icon} /></a></li>
+            <li><a link="https://www.linkedin.com/in/codymeltonmt"><LinkedInIcon className={icon} /></a></li>
+            <li><a link="mailto:cody@codymelton.io"> <MailIcon className={icon} /></a></li>
           </ul>
         </div>
       </div>
