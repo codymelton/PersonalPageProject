@@ -3,7 +3,7 @@ import { Link } from 'react-router'
 import {
         nav,
         navFlexBig,
-        navFlexSmall, 
+        navFlexSmall,
         navLink,
         initial,
         loginButton} from './styles.css'
@@ -14,10 +14,10 @@ const Navigation = (props) => {
     <div className={nav}>
       <p className={initial}>CM</p>
       <ul className={navFlexBig}>
-        <Link className={navLink} to="/home"> Home </Link>
-        <Link className={navLink} to="/about"> About </Link>
-        <Link className={navLink} to="/articles"> Articles </Link>
-        <Link className={navLink} to="/post_article"> Post Article </Link>
+        <Link className={navLink} href="/home"> Home </Link>
+        <Link className={navLink} href="/about"> About </Link>
+        <Link className={navLink} href="/articles"> Articles </Link>
+        <Link className={navLink} href="/post_article"> Post Article </Link>
         <div className={navFlexSmall}>
           <button className={loginButton}> Login </button>
           <button className={loginButton}> Logout </button>

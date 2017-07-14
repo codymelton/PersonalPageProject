@@ -17,7 +17,7 @@ const Home = (props) => {
     <div>
       <div className={mainTronBox}>
         <div className={mainTronCircle}>
-          <img src="./img/headshot.png" />
+          <img alt="Headshot of author" src="./img/headshot.png" />
         </div>
         <div>
           <div className={mainTronText}>
