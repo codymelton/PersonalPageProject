@@ -32,10 +32,30 @@ const Home = (props) => {
         </div>
         <div className={mainTronLinks}>
           <ul>
-            <li><a link="https://www.github.com/codymelton"><GitHubIcon className={icon} /></a></li>
-            <li><a link="https://www.twitter.com/cmeltonmt"><TwitterIcon className={icon} /></a></li>
-            <li><a link="https://www.linkedin.com/in/codymeltonmt"><LinkedInIcon className={icon} /></a></li>
-            <li><a link="mailto:cody@codymelton.io"> <MailIcon className={icon} /></a></li>
+            <li>
+              <a
+                href="https://www.github.com/codymelton" target="_blank">
+                <GitHubIcon className={icon} />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.twitter.com/cmeltonmt" target="_blank">
+                <TwitterIcon className={icon} />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/codymeltonmt" taget="_blank">
+                <LinkedInIcon className={icon} />
+              </a>
+            </li>
+            <li>
+              <a
+                href="mailto:cody@codymelton.io">
+                <MailIcon className={icon} />
+              </a>
+            </li>
           </ul>
         </div>
       </div>
